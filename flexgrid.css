@@ -172,7 +172,6 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-span: 3;
     grid-column: 3/12;
 }
 
