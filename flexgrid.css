@@ -1,24 +1,19 @@
-html, body{
+body{
     background-color:gray;
 }
-
 #menubg{
     display: block;
     background-color: black;
     height:25px;
     width: 100%;
     position:fixed;
-    
-    
+      
 }
 
-h1{
-    padding-top:25px;
-}
-
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     padding-top: 25px;
     margin-top: -15px;
+    align-self: end;
 }
 
 #menu {
@@ -55,13 +50,15 @@ h2, h3, h4, h5, h6 {
     grid-gap: 5px;
     padding: 10px;
     padding-top: 0;
+    
 
     grid: [row1-start] "mh mh" auto [row1-end]
-          [row2-start] "p1 p2" auto [row2-end]
-          [row3-start] "sc-h sc-h" auto[row3-end]
-          [row4-start] "grid flex" auto [row4-end]
-          [row5-start] "twod-h twod-h" auto [row5-end]
-          [row6-start] "twod-g twod-g" auto [row6-end]
+          [row2-start] "con-vs-lay oned-vs-twod-h" auto [row1-end]
+          [row3-start] "p1 p2" auto [row3-end]
+          [row4-start] "sc-h sc-h" auto[row4-end]
+          [row5-start] "grid flex" auto [row5-end]
+          [row6-start] "twod-h twod-h" auto [row6-end]
+          [row7-start] "twod-g twod-g" auto [row7-end]
           / 1fr 1fr;
     
 }
@@ -75,13 +72,23 @@ h2, h3, h4, h5, h6 {
 }
 
 #main-header{
+    padding-top:25px;
+    margin-top:0px;
     grid-area: mh
+}
+
+#content-vs-layout-header{
+    grid-area:con-vs-lay;
 }
 
 #p-1 {
     /*grid-column: 1/2;
     grid-row: 1/2;*/
     grid-area: p1
+}
+
+#oned-vs-twod-header{
+    grid-area: oned-vs-twod-h
 }
 
 #p-2{
@@ -109,6 +116,7 @@ h2, h3, h4, h5, h6 {
     display: grid;   
     grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
   grid-template-rows: 50px 50px 50px;
+  
   grid-row-gap: 4px;
   grid-column-gap: 9px;
   border-radius: 5px;
@@ -172,6 +180,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
     grid-column: 3/12;
 }
 
@@ -217,23 +226,30 @@ header div:nth-child(3){
     body{
         background-color: hotpink;
     }
-.grid {
-    grid-template-rows: 50px 50px;
-}
-.knasgrid img{
-    display: none;
-}
+
     #maingrid{
         grid: [row1-start] "mh" auto [row1-end]
-          [row2-start] "p1" auto [row2-end]
-          [row3-start] "p2" auto[row3-end]
-          [row4-start] "sc-h" auto[row4-end]
-          [row5-start] "grid" auto [row5-end]
-          [row6-start] "flex" auto [row6-end]
-          [row7-start] "twod-h" auto [row7-end]
-          [row8-start] "twod-g" auto [row8-end]
+          [row2-start] "con-vs-lay" auto [row2-end]
+          [row3-start] "p1" auto [row3-end]
+          [row4-start] "oned-vs-twod-h" auto[row4-end]
+          [row5-start] "p2" auto[row5-end]
+          [row6-start] "sc-h" auto[row6-end]
+          [row7-start] "grid" auto [row7-end]
+          [row8-start] "flex" auto [row8-end]
+          [row9-start] "twod-h" auto [row9-end]
+          [row10-start] "twod-g" auto [row10-end]
           / auto;
 
+          
+
           background-color: hotpink;
+    }
+.grid{
+    grid-template-rows: 50px 50px;
+
+}
+    
+    .knasgrid img{
+        display:none;
     }
 }
